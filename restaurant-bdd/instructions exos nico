@@ -1,8 +1,0 @@
-﻿Dans une base "restaurant", créer 1 table pour stocker les plats d'un restaurant :table "plat" :
-id(clef primaire, index), nom, prix, imageCréer un fichier connection.php dans un répertoire de config/ que l'on incluera dans les fichiers PHP du site qui ont besoin de faire des requetes.Créer le formulaire permettant d'ajouter un plat
-Créer une page plat.php qui affiche tous les platsPuis faire une table "menu" :
-id(clef primaire, index), id_plat, nom, prix
-Créer le formulaire permettant d'ajouter un menu et un autre formulaire permettant d'y ajouter des plats (case à cocher)
-Créer un page qui affiche tous les menus
-Créer une page qui affiche tous les menus et les plats correspondantes
-Bonus : Faire tous ça en POO !!

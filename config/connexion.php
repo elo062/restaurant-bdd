@@ -2,8 +2,9 @@
 // Connexion à la base de données
 $serverName = 'localhost';
 $dbname = 'restaurant';
-$login = 'root';
-$mdp = 'moumoune';
+$login = 'nico';
+$mdp = 'menu';
+
 
 try
 {
@@ -14,4 +15,5 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
- ?>
+
+?>
