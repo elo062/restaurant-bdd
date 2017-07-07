@@ -30,12 +30,11 @@ time, mark, audio, video {
 
 @font-face
 {
-  font-family: "body" ;
+  font-family: "body";
   src: url("body.ttf"),
        url("body-bold.ttf"),
        url("body-italic.ttf"),
-       url("body-bold-italic.ttf"),
-
+       url("body-bold-italic.ttf");
 }
 
 /* Header */
@@ -43,11 +42,9 @@ time, mark, audio, video {
 .haut{
     background-color: rgba(0, 0, 0, 0.9);
     overflow-y: auto;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    /*z-index: 10000;*/
     font-size: 1.4em;
 		color: white;
 		display: flex;
@@ -57,7 +54,12 @@ time, mark, audio, video {
 #logo{
   font-family:"logo";
   font-size: 3em;
-	margin: 10px 0 0 15px;
+	margin: 10px 0 0 30px;
+}
+
+#logo a {
+	color: white;
+	text-decoration: none;
 }
 
 
@@ -74,7 +76,7 @@ time, mark, audio, video {
 
 
 #menu a{
-	color: rgba(255, 0, 0, 0.5);
+	color: #ff4000;
 	text-decoration: none;
 }
 
@@ -95,32 +97,69 @@ background-size: cover;
 background-position: center center;
 margin: auto;
 margin-top: 10%;
-font-family:
 }
 
 /*fond des pages*/
 
-.plat{
-	background-image: url("assets/img/fodd-background.jpg");
+/*image page d'accueil*/
+.img_centree{
+	margin: auto;
+	display: block;
 }
 
+/*image fond d'écran*/
+
+body{
+	background-image: url("img/food-background.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+.plat{
+	font-family: "body";
+	font-weight: bold;
+	font-size: 1.3em;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.button{
+	padding: 3px;
+	margin: 20px;
+	border-radius: 5px;
+	font-family: "body";
+	font-weight: bold;
+	font-size: 1em;
+}
 
 /*Footer*/
 footer{
+	font-family: "body";
+	font-weight: bold;
+	color: white;
+	font-size: 1em;
 	background-color: black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 130px;
+	align-items: center;
 }
 
 #infos a{
 	text-decoration: none;
-	color: yellow;
+	color: #ff4000;
 }
 
 #rs ul
 {
     list-style-type: none;
-	display: flex;
-	justify-content: space-around;
-	margin-top: 11px;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 11px;
 }
 
 #rs a

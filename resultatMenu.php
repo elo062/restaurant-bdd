@@ -8,13 +8,23 @@ $nom = $_POST['nom'];
 $prix = $_POST['prix'];
 $plat = $_POST['plat'];
 
-// On ajoute une entrée dans la table plat
-$req = $bdd->prepare('INSERT INTO menus(nom, prix, id_plat) VALUES(:nom, :prix, :plat)');
+// On ajoute une entrée dans la table menus
+$req = $bdd->prepare('INSERT INTO menus(nom, prix) VALUES(:nom, :prix)');
 $req->execute(array(
 	'nom' => $nom,
-	'prix' => $prix,
-  'plat' => $plat
+	'prix' => $prix
 	));
+
+// On récupère l'id du menu qui vient d'être créée
+$req_id_menus = $bdd->lastInsertId();
+
+$plat = intval($plat);
+$req = $bdd->prepare('INSERT INTO relation_menus_plats (id_menus, id_plats) VALUES(:id_menus, :id_plats)');
+$req->execute(array(
+	'id_menus' => $req_id_menus,
+	'id_plats' => $plat
+	));
+
 ?>
 
 <h1>Vos menus créés :</h1>
@@ -37,13 +47,15 @@ while ($donnees = $reponse->fetch())
 $reponse->closeCursor(); // Termine le traitement de la requête
 // tables
 
+$req_menu_plat = $bdd->query('SELECT menus.prix AS menuPrix,
+																			menus.nom AS menuNom,
+																			plats.prix AS platsPrix,
+																			plats.nom AS platsNom
+															FROM `relation_menus_plats`
+															LEFT JOIN menus ON `menus`.id = `relation_menus_plats`.id_menus
+															LEFT JOIN plats ON `plats`.id = `relation_menus_plats`.id_plats');
 
 
-$req_menu_plat = $bdd->query('SELECT menus.prix AS menuPrix, menus.nom AS menuNom, plats.prix AS platsPrix, plats.nom AS platsNom
-FROM `plats`
-INNER JOIN `menus`
-ON `plats`.`ID` = `menus`.`id_plat`
-');
 
 while ($donnees = $req_menu_plat->fetch())
 {

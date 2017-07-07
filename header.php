@@ -12,7 +12,7 @@
     <body>
 
         <div class="haut">
-        <h1 id="logo">Chez Elo</h1>
+        <h1 id="logo"><a href="accueil.php">Chez Elo</a></h1>
             <ul id="menu">
                 <li><a href="menu.php">Nouveau Menu</a></li>
                 <li><a href="plat.php">Nouveau Plat</a></li>

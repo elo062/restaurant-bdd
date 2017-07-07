@@ -15,7 +15,7 @@
          <input type="file" name="image" value="image" id="image">
       </p>
 
-      <input type="submit" name="envoyer" value="Envoyer">
+      <input type="submit" name="envoyer" value="Envoyer" class="button">
   </form>
 </div>
 <?php require_once ("footer.php"); ?>
