@@ -1,15 +1,10 @@
 <?php
 // On se connecte à la bdd
 include("./config/connexion.php");
+require_once ("header.php");
 
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Menu</title>
-  </head>
-  <body>
+
 <!-- formulaire permettant d'ajouter un menu -->
 <form method="post" action="resultatMenu.php" enctype="multipart/form-data">
    <p>
@@ -37,5 +32,4 @@ include("./config/connexion.php");
     <input type="submit" name="envoyer" value="Envoyer">
   </form>
 
-</body>
-</html>
+<?php require_once ("footer.php"); ?>

@@ -1,0 +1,134 @@
+/* Reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@font-face
+{
+  font-family: "logo" ;
+  src: url("logo.ttf"),
+        url("logo.otf");
+}
+
+@font-face
+{
+  font-family: "body" ;
+  src: url("body.ttf"),
+       url("body-bold.ttf"),
+       url("body-italic.ttf"),
+       url("body-bold-italic.ttf"),
+
+}
+
+/* Header */
+
+.haut{
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*z-index: 10000;*/
+    font-size: 1.4em;
+		color: white;
+		display: flex;
+		justify-content: space-between;
+}
+
+#logo{
+  font-family:"logo";
+  font-size: 3em;
+	margin: 10px 0 0 15px;
+}
+
+
+/* Navigation */
+
+#menu{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+		align-items: center;
+    font-size: 0.8em;
+		width:50%;
+}
+
+
+#menu a{
+	color: rgba(255, 0, 0, 0.5);
+	text-decoration: none;
+}
+
+#menu a:hover{
+	color: white;
+	background-color: rgb(187,46,46);
+	background: -webkit-linear-gradient(left,#722,rgb(187,46,46) 15%,rgb(187,46,46) 95%,#722 100%);
+	background: -moz-linear-gradient(left,#722,rgb(187,46,46) 15%,rgb(187,46,46) 95%,#722 100%);
+	background: -o-linear-gradient(left,#722,#555 15%,#555 95%,#722 100%);
+	background: linear-gradient(to right,#722,rgb(187,46,46) 15%,rgb(187,46,46) 95%,#722 100%);
+}
+
+#accueil{
+font-family: "body";
+background-image: url("assets/img/accueil-biere.jpg");
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+margin: auto;
+margin-top: 10%;
+font-family:
+}
+
+/*fond des pages*/
+
+.plat{
+	background-image: url("assets/img/fodd-background.jpg");
+}
+
+
+/*Footer*/
+footer{
+	background-color: black;
+}
+
+#infos a{
+	text-decoration: none;
+	color: yellow;
+}
+
+#rs ul
+{
+    list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 11px;
+}
+
+#rs a
+{
+    text-decoration: none;
+    color: #760001;
+}
+
+.fa{
+	color: rgb(232,234,236);
+}

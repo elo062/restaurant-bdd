@@ -6,3 +6,21 @@ Créer le formulaire permettant d'ajouter un menu et un autre formulaire permett
 Créer un page qui affiche tous les menus
 Créer une page qui affiche tous les menus et les plats correspondantes
 Bonus : Faire tous ça en POO !!
+
+
+
+
+Faire une double jointure avec une clé étrangère (dans structure et vue relationnelle en bas) et une contrainte pour mettre plusieurs plats dans un seul menu :
+
+Ce qu'il faut faire :
+retirer id_plat mettre l'id correspdant à la table relationnelle id_vegetarien correspondant à l'id tofu encore id vegetarien avec une autre id plat vegetarien.
+
+
+table relationnelle = table qui servira de jointure entre plusieurs plats pour un seul menu (ex : le menu végétarien contiendra le choix de plusieurs plats sans viande). La table menu contiendra plusieurs types de menus liés à plusieurs types de plats.
+
+
+Voici le code des jointures :
+
+SELECT * FROM `relation_agence_voyage`
+LEFT JOIN voyage ON `voyage`.id = `relation_agence_voyage`.id_voyage
+LEFT JOIN agence ON `agence`.id = `relation_agence_voyage`.id_agence
