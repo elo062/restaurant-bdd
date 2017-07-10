@@ -35,15 +35,15 @@ $image_sizes = getimagesize($_FILES['image']['tmp_name']);
 if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "Image trop grande";
 
 // //Créer un dossier 'images'
-if(!file_exists("images")){
-	mkdir('images', 0777, true);
+if(!file_exists("assets/img")){
+	mkdir('assets/img', 0777, true);
 }
 //
 // //Créer un identifiant difficile à deviner
 //   $nom = md5(uniqid(rand(), true));
 //
 //   $nom = "avatars/{$id_membre}.{$extension_upload}";
- $resultat = move_uploaded_file($_FILES['image']['tmp_name'], "images/".$image);
+ $resultat = move_uploaded_file($_FILES['image']['tmp_name'], "assets/img/".$image);
  if ($resultat) echo "Transfert réussi";
 
 // Note : la variable exec s'utilise uniquement avec des infos en dur, il vaut mieux utiliser le code suivant :
@@ -53,7 +53,7 @@ $req = $bdd->prepare('INSERT INTO plats(nom, prix, image) VALUES(:nom, :prix, :i
 $req->execute(array(
 	'nom' => $nom,
 	'prix' => $prix,
-	'image' => "images/".$image,
+	'image' => "assets/img/".$image,
 	));
 ?>
 

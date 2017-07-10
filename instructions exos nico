@@ -33,3 +33,37 @@ Lorsque vous supprimez id_plat de la table menu pour pouvoir stocker plusieurs p
 Je vais envoyer un exemple avec la base d'agence et voyage , ça sera plus clair (peut-être)
 
 voici l'exemple pour récupérer l'id du dernier enregistrement en base grâce à la méthode lastInertId() de le classe PDO (vous avez la table sql à importer, le fichier parameters.php à adapter pour tester l'index) https://github.com/simplonco/roadtrip
+
+
+
+
+Tout le monde n'a pas fini de lister les menus et leurs plats, lundi sera encore consacré à cela, je remets les points à envoyer plus précisement. A priori on pourrait vous évaluer en aout mais je préfère tabler sur le 24 juillet et dans l'idéal on vous laissera jusqu'au 18 août. afin de laisser Amine en dehors de l'évaluation pour qu'il puisse dérouler son programme normalement à partir du 24. Je reviens le 16 août, pour ceux/celles qui n'auraient pas réussi une des parties, vous pourrez passer une évaluation complémentaire, mais je pense que vous êtes tou.te.s sur la bonne voie( à part les maquettes et schéma que j'ai pas beaucoup vu ). Sinon pour information, vous pourrez aussi(et il voudra mieux) peaufiner votre code même après l'évaluation et jusqu'en janvier 2018 car le jury peut vous poser des questions seulement en fin d'entretien sur ces activités. Mardi vous commencerez l'activité 2(e-commerce avec Prestashop) avec Pat.
+Lundi 10 juillet, je suis à distance mais dispo si vous avez des questions.
+Au sujet du dossier pro, un site pas mal fait qui synthétise un peu les informations à son sujet : http://www.dossierprofessionnel.fr/
+
+
+
+L'application doit gérer l'ajout, la modification et la suppression de plats et de menus. Elle doit aussi permettre d'afficher tous les plats, ou les menus et les plats associés.
+
+Compétences :
+1.Maquetter une application
+2.Concevoir une base de données
+3.Mettre en place une base de données
+4.Développer une interface utilisateur
+5.Développer des composants d'accès aux données (PDO)
+
+Créez avec un logiciel de traitement de texte un document comportant :
+- un résumé entre 40 et 100 caractères de l'interêt et but du site
+- Capture d'écran du schéma ou dessin de la base de donnée (tables et leurs champs avec leur types(int, varchar...))
+- Les 2 versions de maquettes/mockup( au format images) uniquement de votre page qui liste des menus et les plats associés : une version pour ordinateurs et une autre version pour smartphones. ( https://www.alsacreations.com/article/lire/1183-mockup-rough-maquette-zoning.html )
+Posez ce document à la racine de votre dépot.
+
+
+L'interface utilisateur doit être responsive(media queries) sur un smartphone au minimum sur vos pages publiques(liste menu/plat) et idéalement côté admin sur les formulaires de saisi des menus/plats si vous avez le temps.
+
+Envoyez par mail le lien github du projet par mail avant le 24 juillet ( nvilla@simplon.co et pbelaire@simplon.co)
+
+Vous n'aurez pas une note pour chaque point mais on doit cocher si l'activité a été maitrisé ou pas.. 
+
+
+

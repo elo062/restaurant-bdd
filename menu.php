@@ -7,7 +7,7 @@ require_once ("header.php");
 
 <!-- formulaire permettant d'ajouter un menu -->
 <div class="plat">
-  <form method="post" action="resultatMenu.php" enctype="multipart/form-data">
+  <form method="post" action="traitement.php" enctype="multipart/form-data">
    <p>
      <label for="nom">Entrez le nom de votre menu :</label>
         <input type="text" name="nom" id="nom" placeholder="Ex : menu dégustation" size="30" maxlength="30" value="" />
@@ -30,7 +30,7 @@ require_once ("header.php");
     $reponse->closeCursor(); // Termine le traitement de la requête
     ?>
 
-    <input type="submit" name="envoyer" value="Envoyer">
+    <input type="submit" name="envoyer" value="Envoyer" class="button">
   </form>
 </div>
 <?php require_once ("footer.php"); ?>
