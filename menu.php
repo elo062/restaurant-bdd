@@ -2,9 +2,7 @@
 // On se connecte à la bdd
 include("./config/connexion.php");
 require_once ("header.php");
-
 ?>
-
 <!-- formulaire permettant d'ajouter un menu -->
 <div class="plat">
   <form method="post" action="traitement.php" enctype="multipart/form-data">

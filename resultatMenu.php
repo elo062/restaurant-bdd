@@ -25,8 +25,8 @@ $menus = $reponse;
 foreach($menus as $menu)
 {
         // var_dump($menu);
-				echo "<p><strong>id </strong> :" . $menu['ID'] . " </p>";
-				echo "<p><strong>Menu </strong> :" . $menu['nom'] . " </p>";
+				echo "<p class=''><strong>id </strong> :" . $menu['ID'] . " </p>";
+				echo "<p ><strong>Menu </strong> :" . $menu['nom'] . " </p>";
 				echo "<p><strong>Prix </strong> :" . $menu['prix'] . " </p><br />";
 
 }

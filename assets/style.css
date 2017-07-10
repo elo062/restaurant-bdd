@@ -30,11 +30,11 @@ time, mark, audio, video {
 
 @font-face
 {
-  font-family: "body";
-  src: url("body.ttf"),
-       url("body-bold.ttf"),
-       url("body-italic.ttf"),
-       url("body-bold-italic.ttf");
+  font-family: "corps";
+  src: url("corps.ttf");
+       /*url("corps-bold.ttf"),
+       url("corps-italic.ttf"),
+       url("corps-bold-italic.ttf");*/
 }
 
 /* Header */
@@ -128,7 +128,7 @@ time, mark, audio, video {
 
 .texte p{
 	text-align: center;
-	font-family: "body";
+	font-family: "corps";
 	font-size: 1.5em;
 	margin-top: 2%;
 }
@@ -149,7 +149,7 @@ body{
 }
 
 .plat{
-	font-family: "body";
+	font-family: "corps";
 	font-weight: bold;
 	font-size: 1.3em;
 	text-align: center;
@@ -160,7 +160,7 @@ body{
 	padding: 3px;
 	margin: 20px;
 	border-radius: 5px;
-	font-family: "body";
+	font-family: "corps";
 	font-weight: bold;
 	font-size: 1em;
 }
@@ -168,7 +168,7 @@ body{
 /*Footer*/
 footer{
 	height: 130px;
-	font-family: "body";
+	font-family: "corps";
 	font-weight: bold;
 	color: white;
 	font-size: 1em;
