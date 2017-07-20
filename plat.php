@@ -2,7 +2,7 @@
 <?php require_once ("header.php"); ?>
 
 <div class="plat">
-  <form method="post" action="resultatPlat.php" enctype="multipart/form-data">
+  <form method="post" action="traitementPlat.php" enctype="multipart/form-data">
      <p>
        <label for="nom">Entrez le nom de votre plat :</label>
           <input type="text" name="nom" id="nom" placeholder="Ex : Pizza aux 4 fromages" size="30" maxlength="30" value="" />
@@ -12,7 +12,7 @@
          <br />
          <label for="image">Ajoutez une photo (max 1Mo) :</label>
          <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-         <input type="file" name="image" value="image" id="image">
+         <input type="file" name="image" value="" id="image">
       </p>
 
       <input type="submit" name="envoyer" value="Envoyer" class="button">

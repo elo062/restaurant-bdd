@@ -2,14 +2,16 @@
 <?php
 include("header.php");
 ?>
-
+<div class="texte">
 <h1>Vos menus créés :</h1>
+</div>
 
 <?php
 // On se connecte à la bdd
 require_once("./config/connexion.php");
 // On récupère tout le contenu de la table
 $reponse = $bdd->query('SELECT * FROM menus');
+
 
 // $reponse = $reponse->execute();
 // On déclare un tableau menu pour l'utiliser dans une boucle foreach après :
@@ -25,9 +27,12 @@ $menus = $reponse;
 foreach($menus as $menu)
 {
         // var_dump($menu);
-				echo "<p class=''><strong>id </strong> :" . $menu['ID'] . " </p>";
-				echo "<p ><strong>Menu </strong> :" . $menu['nom'] . " </p>";
-				echo "<p><strong>Prix </strong> :" . $menu['prix'] . " </p><br />";
+				echo "<p class='plat'>id : " . $menu['ID'] . " </p>";
+				echo "<p class='plat'>Menu : " . $menu['nom'] . " </p>";
+				echo "<p class='plat'>Prix : " . $menu['prix'] . '€' . " </p><br />";
+				// echo "<p class='plat'><Plats associés : " . $plat['nom'] . " </p><br />";
+				echo "<p class='plat'><a href='updateMenu.php'><input type='submit' value='Modifier' class='button' name='idMenu'></a>";
+				echo "<a href='updateMenu.php'><input type='submit' value='Supprimer' class='button' name='idMenu'></a></p>";
 
 }
 
@@ -49,6 +54,8 @@ foreach($menus as $menu)
 // {
   // var_dump($donnees);
 ?>
+
+
 
 <?php
 include("footer.php");
