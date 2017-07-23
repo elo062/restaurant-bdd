@@ -1,17 +1,11 @@
 ﻿
 Interêt et but du site : 
 
-Il s'agit d'une interface utilisateur permettant au restaurateur de créer ses propres menus avec différents plats. Mon site est responsive, et j'ai pu faire la 1ère partie de l'exercice (grâce à Bruno et Axel) qui consiste à pouvoir ajouter des plats et menus. Par contre je n'ai pas compris comment les modifier ou les supprimer.
+Il s'agit d'une interface utilisateur permettant au restaurateur de créer ses propres menus avec différents plats. Mon site est responsive, et j'ai pu faire la 1ère partie de l'exercice (grâce à Bruno et Axel) qui consiste à pouvoir ajouter des plats et menus. Par contre je n'ai pas su comment les modifier ou les supprimer.
 
 
 
-- Capture d'écran du schéma ou dessin de la base de donnée (tables et leurs champs avec leur types(int, varchar...))
-- Les 2 versions de maquettes/mockup( au format images) uniquement de votre page qui liste des menus et les plats associés : une version pour ordinateurs et une autre version pour smartphones. ( https://www.alsacreations.com/article/lire/1183-mockup-rough-maquette-zoning.html )
-Posez ce document à la racine de votre dépot.
-
-
-
-Envoyez par mail le lien github du projet par mail avant le 24 juillet ( nvilla@simplon.co et pbelaire@simplon.co)
+Envoyez par mail le lien github du projet avant le 24 juillet ( nvilla@simplon.co et pbelaire@simplon.co)
 
 
 
