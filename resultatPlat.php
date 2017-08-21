@@ -20,7 +20,7 @@ $plats = $reponse;
  				echo "<p class='plat'>Prix : " . $plat['prix'] . " € </p>";
 				echo "<p class='plat'><Image : " . $plat['image'] . " </p>";
 				echo "<p class='plat'><img src='./assets/img/" . $plat['image'] . "' </p><br />";
-        echo "<a href='updatePlat.php'><input type='submit' value='Modifier' class='button' name='idPlat'></a>";
+        echo "<a href='updatePlat.php?idPlat=" . $plat['ID'] . "'><input type='submit' value='Modifier' class='button' name='idPlat'></a>";
  				echo "<a href='supprimerPlat.php?idPlat=" . $plat['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idPlat'></a><br /><br />";
  }
 

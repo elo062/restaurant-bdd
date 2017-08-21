@@ -21,7 +21,7 @@
                     <li><a href="#" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
                 </ul>
         </div>
-        <a href="#" title="Haut de la page"><img src="assets/img/top.png" alt="Haut"></a>
+        <a href="#" title="Haut de la page"><img src="assets/img/top.png" id="top" alt="Haut"></a>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/app.js"></script>

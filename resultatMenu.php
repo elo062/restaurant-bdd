@@ -30,7 +30,7 @@ foreach($menus as $menu)
 				// En-dessous de chaque menu on affiche les plats qui le composent avec toutes les infos
 				foreach($plats as $plat)
 				{
-	 				echo "<p class='plat'>Plat : " . $plat['nom'] . " </p>";
+	 				echo "<p class='plat'>Plats composant le menu : " . $plat['nom'] . " </p>";
 	 				echo "<p class='plat'>Prix : " . $plat['prix'] . " € </p><br />";
 	        echo "<p class='plat'><a href='updatePlat.php'><input type='submit' value='Modifier' class='button' name='idPlat'></a>";
 					// Lorsqu'on clique sur "supprimer" on récupère l'ID du plat et on est redirigé vers la page supprimerPlat.php pour le traitement
