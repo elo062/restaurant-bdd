@@ -2,7 +2,7 @@
 include("header.php");
 require_once("./config/connexion.php");
 
-// On définit la variable idPlat en récupérant le ? idPlat = de la boucle foreach résultatPlat.php
+// On définit la variable idPlat en récupérant le "?idPlat=" de la boucle foreach resultatPlat.php
 $idPlat = $_GET['idPlat'];
 
 // On entre dans le champ de la bdd pour le supprimer :
