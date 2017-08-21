@@ -9,18 +9,18 @@ $image = $_FILES['image']['name'];
 $maxsize = 12345;
 $maxwidth = 1000;
 $maxheight = 1000;
-$idPlat = $_GET['idPlat'];
+$idMenu = $_GET['idMenu'];
 
 
 // Contrôles sur le fichier :
-// Si on laisse l'image vide, le plat garde la précédente.
+// Si on laisse l'image vide, le menu garde la précédente.
 if(empty($_FILES['image']['tmp_name'])) {
  // On modifie une entrée dans la table plats
- $req = $bdd->prepare('UPDATE `restaurant`.`plats` SET `nom` = :nom, `prix` = :prix WHERE `plats`.`ID` = :id_plats');
+ $req = $bdd->prepare('UPDATE `restaurant`.`menus` SET `nom` = :nom, `prix` = :prix WHERE `menus`.`ID` = :id_menus');
  $req->execute(array(
    'nom' => $nom,
    'prix' => $prix,
-   'id_plats' => $idPlat
+   'id_menus' => $idMenu
    ));
 }
 else {
@@ -43,15 +43,15 @@ else {
      if ($resultat) echo "Transfert réussi";
 
      // On modifie une entrée dans la table plats
-     $req = $bdd->prepare('UPDATE `restaurant`.`plats` SET `nom` = :nom, `prix` = :prix, `image` = :image WHERE `plats`.`ID` = :id_plats');
+     $req = $bdd->prepare('UPDATE `restaurant`.`menus` SET `nom` = :nom, `prix` = :prix, `image` = :image WHERE `menus`.`ID` = :id_menus');
      $req->execute(array(
      	'nom' => $nom,
      	'prix' => $prix,
       'image' => $image,
-      'id_plats' => $idPlat
+      'id_menus' => $idMenu
      	));
 }
 
 // Redirection vers la page resultatPlat.php
-header('Location:resultatPlat.php');
+header('Location:resultatMenu.php');
 ?>

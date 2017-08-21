@@ -149,7 +149,7 @@ a:link
 	text-align: center;
 	font-family: "corps";
 	font-size: 1.5em;
-	margin-top: 2%;
+	margin-top: 1%;
 }
 
 .accueil{
@@ -159,7 +159,9 @@ a:link
 	height: 500px;
 }
 
-
+.separation{
+	margin-top: 5%;
+}
 
 /*image fond d'écran*/
 

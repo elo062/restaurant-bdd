@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+require_once("header.php");
 require_once("./config/connexion.php");
 
 // On définit la variable idPlat en récupérant l'ID de resultatPlat.php
@@ -20,5 +20,5 @@ $requete->execute();
 echo  "<p class='plat'>Votre plat a bien été supprimé !</p>";
 
 
-include("footer.php");
+require_once("footer.php");
  ?>

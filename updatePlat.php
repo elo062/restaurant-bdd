@@ -36,11 +36,5 @@ while ($donnees = $requete->fetch())
   </div>";
 }
 
-
-// foreach($plats as $plat)
-// {
-
-// }
-
 require_once ("footer.php");
 ?>

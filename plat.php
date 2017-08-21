@@ -18,4 +18,5 @@
       <input type="submit" name="envoyer" value="Envoyer" class="button">
   </form>
 </div>
+
 <?php require_once ("footer.php"); ?>

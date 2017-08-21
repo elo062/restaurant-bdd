@@ -1,8 +1,8 @@
 <!-- Page qui affiche tous les plats -->
 <?php
 // On se connecte à la bdd
-include("./config/connexion.php");
-include("header.php");
+require_once("./config/connexion.php");
+require_once("header.php");
 $reponse = $bdd->query('SELECT * FROM plats ORDER BY plats.id DESC ');
 $plats = $reponse;
  ?>
@@ -15,7 +15,6 @@ $plats = $reponse;
  <?php
  foreach($plats as $plat)
  {
- 			// 	echo "<p class='plat'>id : " . $plat['ID'] . " </p>";
  				echo "<p class='plat'>Plat : " . $plat['nom'] . " </p>";
  				echo "<p class='plat'>Prix : " . $plat['prix'] . " € </p>";
 				echo "<p class='plat'><Image : " . $plat['image'] . " </p>";
@@ -24,5 +23,5 @@ $plats = $reponse;
  				echo "<a href='supprimerPlat.php?idPlat=" . $plat['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idPlat'></a><br /><br />";
  }
 
-include("footer.php");
+require_once("footer.php");
 ?>

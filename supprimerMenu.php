@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+require_once("header.php");
 require_once("./config/connexion.php");
 
 // On définit la variable idMenu en récupérant le ? idMenu = de la boucle foreach résultatMenu.php
@@ -19,6 +19,5 @@ $requete->execute();
 
 echo  "<p class='plat'>Votre menu a bien été supprimé !</p>";
 
-
-include("footer.php");
+require_once("footer.php");
  ?>
