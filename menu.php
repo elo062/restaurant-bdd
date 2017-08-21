@@ -12,9 +12,9 @@ require_once ("header.php");
        <br />
        <label for="prix">Entrez son prix en euros :</label>
        <input type="text" name="prix" id="prix" placeholder="Ex : 14.99" size="30" maxlength="5" value=""/><br />
-       <!-- <label for="image">Ajoutez une photo (max 1Mo) :</label>
+       <label for="image">Ajoutez une photo (max 1Mo) :</label>
        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-       <input type="file" name="image" value="image" id="image" /> -->
+       <input type="file" name="image" value="image" id="image" />
     </p>
     <?php
     $reponse = $bdd->query('SELECT * FROM plats');
@@ -22,7 +22,7 @@ require_once ("header.php");
     echo '<p>Veuillez indiquer le plat que vous souhaitez :<br />';
     while ($donnees = $reponse->fetch())
     {
-      echo'<input type="checkbox" name="plat" value="' . $donnees['ID'] . '"/>' . $donnees['nom'] .'<br />';
+      echo'<input type="checkbox" name="plat[]" value="' . $donnees['ID'] . '"/>' . $donnees['nom'] .'<br />';
     }
 
     $reponse->closeCursor(); // Termine le traitement de la requête

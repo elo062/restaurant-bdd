@@ -9,8 +9,9 @@ include("header.php");
 <?php
 // On se connecte à la bdd
 require_once("./config/connexion.php");
-// On récupère tout le contenu de la table
+// On récupère tout le contenu de la table menus
 $reponse = $bdd->query('SELECT * FROM menus');
+
 
 
 // $reponse = $reponse->execute();
@@ -30,9 +31,21 @@ foreach($menus as $menu)
 				echo "<p class='plat'>id : " . $menu['ID'] . " </p>";
 				echo "<p class='plat'>Menu : " . $menu['nom'] . " </p>";
 				echo "<p class='plat'>Prix : " . $menu['prix'] . '€' . " </p><br />";
-				// echo "<p class='plat'><Plats associés : " . $plat['nom'] . " </p><br />";
+				echo "<p class='plat'><img src='./assets/img/" . $menu['image'] . "' </p><br />";
 				echo "<p class='plat'><a href='updateMenu.php'><input type='submit' value='Modifier' class='button' name='idMenu'></a>";
-				echo "<a href='updateMenu.php'><input type='submit' value='Supprimer' class='button' name='idMenu'></a></p>";
+				echo "<a href='supprimerMenu.php?idMenu=" . $menu['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idMenu'></a></p>";
+
+				// On fait une jointure à gauche entre l'ID des plats de la table plats et l'id_menus de la table `relation_menus_plats`
+				$platsMenu = $bdd->query('SELECT *  FROM `relation_menus_plats` LEFT JOIN plats ON `relation_menus_plats`.id_plats = plats.ID WHERE `id_menus` ="'.$menu['ID'] . '"');
+				$plats = $platsMenu;
+
+				foreach($plats as $plat)
+				{
+	 				echo "<p class='plat'>Plat : " . $plat['nom'] . " </p>";
+	 				echo "<p class='plat'>Prix : " . $plat['prix'] . " € </p><br />";
+	        echo "<a href='updatePlat.php'><input type='submit' value='Modifier' class='button' name='idPlat'></a>";
+	 				echo "<a href='supprimerPlat.php?idPlat=" . $plat['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idPlat'></a>";
+				}
 
 }
 
