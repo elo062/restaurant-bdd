@@ -10,7 +10,7 @@ include("header.php");
 // On se connecte à la bdd
 require_once("./config/connexion.php");
 // On récupère tout le contenu de la table menus
-$reponse = $bdd->query('SELECT * FROM menus');
+$reponse = $bdd->query('SELECT * FROM menus ORDER BY menus.id DESC');
 $menus = $reponse;
 
 
@@ -34,7 +34,7 @@ foreach($menus as $menu)
 	 				echo "<p class='plat'>Prix : " . $plat['prix'] . " € </p><br />";
 	        echo "<p class='plat'><a href='updatePlat.php'><input type='submit' value='Modifier' class='button' name='idPlat'></a>";
 					// Lorsqu'on clique sur "supprimer" on récupère l'ID du plat et on est redirigé vers la page supprimerPlat.php pour le traitement
-	 				echo "<a href='supprimerPlat.php?idPlat=" . $plat['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idPlat'></a></p>";
+	 				echo "<a href='supprimerPlatduMenu.php?idPlat=" . $plat['ID'] . "&idMenu=" . $menu['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idPlat'></a></p>";
 				}
 
 }

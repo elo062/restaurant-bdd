@@ -86,6 +86,9 @@ a:link
 }
 
 
+/* Header et Footer responsive */
+
+
 @media screen and (max-width: 800px) {
 	.topnav a:not(:first-child) {display: none;}
 	.topnav a.icon {
@@ -130,6 +133,7 @@ a:link
 }
 
 
+
 /*texte page d'accueil*/
 .texte h1{
 	text-align: center;
@@ -165,6 +169,11 @@ body{
 	padding-bottom: 120px;
 }
 
+/* images des plats et menus */
+
+img{
+	max-width: 350px ;
+}
 
 .plat{
 	font-family: "corps";
