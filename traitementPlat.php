@@ -26,15 +26,7 @@ if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte"
 $image_sizes = getimagesize($_FILES['image']['tmp_name']);
 if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "Image trop grande";
 
-// //Créer un dossier 'images'
-// if(!file_exists("assets/img")){
-// 	mkdir('assets/img', 0775, true);
-// }
-//
-// //Créer un identifiant difficile à deviner
-//   $nom = md5(uniqid(rand(), true));
-//
-//   $nom = "avatars/{$id_membre}.{$extension_upload}";
+
  $resultat = move_uploaded_file($_FILES['image']['tmp_name'], "assets/img/".$image);
  if ($resultat) echo "Transfert réussi";
 
@@ -47,20 +39,5 @@ $req->execute(array(
   'image' => $image
 	));
 
-
-// On récupère l'id du plat qui vient d'être créée
-// $req_id_plats = $bdd->lastInsertId();
-//
-// //test
-// // var_dump($bdd);
-// // var_dump($req);
-// // var_dump($req_id_menus);
-//
-// $plat = intval($plat);
-// $req = $bdd->prepare('INSERT INTO relation_menus_plats (id_menus, id_plats) VALUES(:id_menus, :id_plats)');
-// $req->execute(array(
-// 	'id_menus' => $req_id_menus,
-// 	'id_plats' => $plat
-// 	));
 header('Location:resultatPlat.php');
 ?>

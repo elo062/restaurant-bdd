@@ -9,6 +9,7 @@ $image = $_FILES['image']['name'];
 $maxsize = 12345;
 $maxwidth = 1000;
 $maxheight = 1000;
+// On récupère l'id du plat de la page updatePlat.php
 $idPlat = $_GET['idPlat'];
 
 

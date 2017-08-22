@@ -14,6 +14,7 @@ $idMenu = $_GET['idMenu'];
 
 // Contrôles sur le fichier :
 // Si on laisse l'image vide, le menu garde la précédente.
+// Le champ tmp_name permet de stocker un nom temporaire pour vérifier si le fichier existe
 if(empty($_FILES['image']['tmp_name'])) {
  // On modifie une entrée dans la table plats
  $req = $bdd->prepare('UPDATE `restaurant`.`menus` SET `nom` = :nom, `prix` = :prix WHERE `menus`.`ID` = :id_menus');
