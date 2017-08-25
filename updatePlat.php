@@ -9,7 +9,7 @@ $idPlat = $_GET['idPlat'];
 
 
 // On sélectionne le plat à modifier :
-$requete = $bdd->prepare('SELECT * FROM plats WHERE ID = :id_plats'); // :id_plats est inventé ici, il doit crspdre au 2ème paramètre de bindParam
+$requete = $bdd->prepare('SELECT * FROM plats WHERE ID = :id_plats'); // :id_plats est inventé ici, il doit crspdre au 1er paramètre de bindParam
 $requete->bindParam(':id_plats', $idPlat);
 $requete->execute();
 
