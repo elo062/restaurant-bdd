@@ -16,7 +16,7 @@ $idMenu = $_GET['idMenu'];
 // Si on laisse l'image vide, le menu garde la précédente.
 // Le champ tmp_name permet de stocker un nom temporaire pour vérifier si le fichier existe
 if(empty($_FILES['image']['tmp_name'])) {
- // On modifie une entrée dans la table plats
+ // On modifie une entrée dans la table menus
  $req = $bdd->prepare('UPDATE `restaurant`.`menus` SET `nom` = :nom, `prix` = :prix WHERE `menus`.`ID` = :id_menus');
  $req->execute(array(
    'nom' => $nom,
@@ -43,7 +43,7 @@ else {
      $resultat = move_uploaded_file($_FILES['image']['tmp_name'], "assets/img/".$image);
      if ($resultat) echo "Transfert réussi";
 
-     // On modifie une entrée dans la table plats
+     // On modifie une entrée dans la table menus
      $req = $bdd->prepare('UPDATE `restaurant`.`menus` SET `nom` = :nom, `prix` = :prix, `image` = :image WHERE `menus`.`ID` = :id_menus');
      $req->execute(array(
      	'nom' => $nom,
@@ -53,6 +53,6 @@ else {
      	));
 }
 
-// Redirection vers la page resultatPlat.php
+// Redirection vers la page resultatMenu.php
 header('Location:resultatMenu.php');
 ?>
